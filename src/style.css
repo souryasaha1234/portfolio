@@ -5,8 +5,8 @@ html {
 }
 
 body {
-  /* background-color: skyblue; */
-  background-image: url(./img/background-theme-image.jpg);
+  background: black;
+  background: url(./img/background-theme-image.jpg);
   background-size: contain;
   background-attachment: fixed;
   color: white;
@@ -33,7 +33,7 @@ header {
   border-bottom: 1px dashed white;
   text-align: center;
   font-size: 5vw;
-  /* padding: 0; */
+  font-weight: bold;
   text-transform: uppercase;  
   color: white;
   -webkit-text-stroke-color: red;
@@ -80,6 +80,11 @@ header {
   border-radius: 50%;
   margin-top: 15%;
 }
+
+.lazy-img {
+  filter: blur(5px);
+}
+
 .project-status-completed {
   background-color: green;
   border-radius: 10rem;
@@ -206,7 +211,14 @@ nav ul li:hover::after {
 
 #skills ul{
   list-style: none;
+  font-size: larger;
+
 }
 #skills ul li {
   margin: 7vh;
 }
+
+p{
+  font-size: larger;
+}
+

@@ -1,5 +1,16 @@
 'use strict';
 
+// Page loading
+// document.onreadystatechange = function () {
+//   if (document.readyState !== 'complete') {
+//     document.querySelector('body').style.visibility = 'hidden';
+//     document.querySelector('#spinner').style.visibility = 'visible';
+//   } else {
+//     document.querySelector('#spinner').style.display = 'none';
+//     document.querySelector('body').style.visibility = 'visible';
+//   }
+// };
+
 //Sticky navigation
 const navigation = document.querySelector('.navigation');
 
@@ -68,5 +79,30 @@ allSection.forEach(function (section) {
   section.classList.add('section--hidden');
 });
 
+//Lazy loding
+const imgTargets = document.querySelectorAll('img[data-src]');
 
-//portfolio loading
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  //Replace src with data-src
+  entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener('load', function () {
+    entry.target.classList.remove('lazy-img');
+  });
+  observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: '-200px',
+});
+
+imgTargets.forEach(img => imgObserver.observe(img));
+
+document.querySelector('body').addEventListener('load', function () {
+});
