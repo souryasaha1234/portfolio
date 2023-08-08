@@ -31,6 +31,23 @@
           <li><a href="#contacts">Contacts</a></li>
         </ul>
       </nav>
+      
+      <nav class="mobile-navigation" role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul class="mobile-navigations">
+            <li><a href="#About">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </div>
+      </nav>
 
       <button onclick="topFunction()" id="myBtn" title="Go to top">
         <i class="bi bi-arrow-up-circle-fill"></i>
@@ -38,9 +55,14 @@
 
       <div class="body">
         <!-- introduction -->
-        <div id="introduction" class="body-elements">
+        <div id="introduction" class="body-elements desktop">
           <p id="demo"></p>
         </div>
+
+        <div id="introduction" class="body-elements mobile">
+          <p id="demoMobile">Welcome to my portfolio website.</p>
+        </div>
+
         <!--About section-->
         <div id="About" class="body-elements">
           <h1>About me</h1>
@@ -95,7 +117,7 @@
           <ul>
             <li><i class="bi bi-check2-circle colored-text"></i> <strong>C</strong> &#8902 <strong>C++</strong> &#8902 <strong>JavaSE</strong></li>
             <li><i class="bi bi-check2-circle colored-text"></i> <strong>JDBC</strong> &#8902 <strong>Servlet</strong></li>
-            <li><i class="bi bi-check2-circle colored-text"></i> <strong>HTML</strong> &#8902 <strong></strong>></li>
+            <li><i class="bi bi-check2-circle colored-text"></i> <strong>HTML</strong> &#8902 <strong>CSS</strong></li>
             <li><i class="bi bi-check2-circle colored-text"></i> <strong>JavaScript</strong> &#8902 <strong>TypeScript</strong></li>
             <li><i class="bi bi-check2-circle colored-text"></i> <strong>DSA</strong> &#8902 <strong>Problem Solving</strong></li>
           </ul>

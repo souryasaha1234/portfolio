@@ -21,7 +21,7 @@ const navHeight = navigation.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  console.log(entry);
+  // console.log(entry);
 
   if (!entry.isIntersecting) navigation.classList.add('sticky');
   else navigation.classList.remove('sticky');
@@ -74,6 +74,7 @@ const revealsection = function (entries, observer) {
 const sectionObserver = new IntersectionObserver(revealsection, {
   root: null,
   threshold: 0.2,
+  rootMargin : '0px',
 });
 
 allSection.forEach(function (section) {
@@ -100,8 +101,8 @@ const loadImg = function (entries, observer) {
 
 const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
-  threshold: 0.3,
-  rootMargin: '-200px',
+  threshold: 0,
+  rootMargin: '0px',
 });
 
 imgTargets.forEach(img => imgObserver.observe(img));
@@ -123,4 +124,4 @@ window.addEventListener('load', function () {
   this.setTimeout(function () {
     typeWriter();
   }, 2500);
-});s
+});
