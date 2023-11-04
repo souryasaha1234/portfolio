@@ -2,6 +2,7 @@
 
 // Page loading
 window.addEventListener('load', function () {
+  topFunction();
   var loadingScreen = document.getElementById('loading-screen');
   var content = document.getElementById('content');
 
@@ -74,7 +75,7 @@ const revealsection = function (entries, observer) {
 const sectionObserver = new IntersectionObserver(revealsection, {
   root: null,
   threshold: 0.2,
-  rootMargin : '0px',
+  rootMargin: '0px',
 });
 
 allSection.forEach(function (section) {
@@ -110,8 +111,9 @@ imgTargets.forEach(img => imgObserver.observe(img));
 document.querySelector('body').addEventListener('load', function () {});
 
 var i = 0;
-var txt = 'Welcome to my portfolio website. Please Scroll down to explore it... ⬇';
-var speed = 70;
+var txt =
+  'Welcome to my portfolio website. Please Scroll down to explore it... ⬇';
+var speed = 50;
 
 function typeWriter() {
   if (i < txt.length) {

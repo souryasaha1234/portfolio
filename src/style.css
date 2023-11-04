@@ -97,6 +97,24 @@ header {
   padding: 0.3vw;
 }
 
+.project-link {
+  display: inline;
+  background-color: rgba(14, 202, 20, 0.6);
+  width: fit-content;
+  border: 5px double black;
+  color: black;
+  padding: 10px;
+  margin: 30px;
+  margin-left: 0px;
+}
+.project-link a {
+  text-decoration: none;
+  color: inherit;
+}
+.github-link {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
 .navigations {
   display: flex;
   justify-content: center;
@@ -128,7 +146,8 @@ header {
   top: 0;
   position: fixed;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(50px);
 }
 
 #myBtn {
@@ -158,13 +177,13 @@ header {
   text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
 
-#contacts ul {
+.contact-items ul {
   display: flex;
   flex-direction: row;
   width: 40%;
 }
 
-#contacts li {
+.contact-items li {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -172,13 +191,54 @@ header {
   font-size: 2.5vh;
 }
 
-#contacts li a {
+.contact-items li a {
   text-decoration: none;
   color: white;
   font-size: 10vh;
 }
-#contacts li a:hover {
+.contact-items li a:hover {
   color: red;
+}
+
+.message-me {
+  display: block;
+  width: fit-content;
+  /* border: 1px solid white; */
+  box-shadow: 0px 0px 10px white;
+  border-radius: 10px;
+  margin: auto;
+  padding: 3vh;
+}
+.message-me h1 {
+  font-size: x-large;
+  border: none;
+  border-radius: 0px;
+  margin: auto;
+  margin-bottom: 3vh;
+  border-radius: 30px;
+}
+.message-me input {
+  height: 5vh;
+}
+.message-me input,
+textarea {
+  backdrop-filter: blur(5px);
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  margin: 5px;
+}
+.message-me input[type='submit'] {
+  background-color: rgba(255, 0, 0, 0.6);
+  padding: 3vh;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.message-me input[type='submit']:hover {
+  background-color: rgba(255, 0, 0, 0.9);
+  cursor: pointer;
 }
 
 .colored-text {
@@ -321,7 +381,9 @@ p {
 .mobile-navigations {
   display: none;
 }
-
+.skillcolor {
+  color: wheat;
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
@@ -479,7 +541,7 @@ p {
   .About-me-photo {
     width: 100%;
   }
-  #contacts li {
+  .contact-items li {
     margin: 20px;
   }
 }

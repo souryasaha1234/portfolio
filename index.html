@@ -16,7 +16,7 @@
     </div>
 
     <div id="content" class="hidden">
-      <!-- Your website content goes here -->
+      <!-- website content goes here -->
       <header class="headerEl">
         <!-- <h1>Sourya Saha - Portfolio</h1> -->
         Sourya Saha - Portfolio
@@ -69,22 +69,21 @@
           <div class="About-me">
             <div class="About-me-text">
               <p class="colored-text">
-                Hello! I am Sourya Saha, a passionate third-year B.Tech student
-                specializing in Computer Science and Technology at the Academy of
+                Hello! I am <b>Sourya Saha</b>, a passionate third-year <b>B.Tech</b> student
+                specializing in <b>Computer Science and Engineering</b> at the Academy of
                 Technology, Hooghly, WB.
               </p>
               <p>
-                My fascination with the constructive aspects of CS has led me to delve 
-                into the world of
-                <u>Full-stack web development</u>. I have honed my skills in
-                <u>JavaSE</u> and <u>C++</u>, and have a solid foundation in
-                frontend technologies such as <u>HTML</u>, <u>CSS</u>,
-                <u>JavaScript</u> and <u>TypeScript</u>.
+                My fascination with the constructive aspects of CS has led me into the world of
+                <b class="skillcolor">Full-stack web development</b>. I have honed my skills in
+                <b class="skillcolor">JavaSE</b> and <b class="skillcolor">C++</b>, and have a solid foundation in
+                frontend technologies such as <b class="skillcolor">HTML</b>, <b class="skillcolor">CSS</b>,
+                <b class="skillcolor">JavaScript</b> and <b class="skillcolor">TypeScript</b>. I've just scratched the surface of learning <b class="skillcolor">Angular</b>.
               </p>
               <p>
-                My knack for problem-solving has been instrumental in my understanding and
-                <b>application</b> of <u>JDBC</u> and <u>Servlets</u>. I have
-                successfully developed <b>layered applications on JDBC</b>,
+                My knack for problem-solving has been instrumental in my 
+                <b>application</b> of <b class="skillcolor">JDBC</b> and <b class="skillcolor">Servlets</b>. I have
+                successfully developed <b>layered applications</b> on <b class="skillcolor">JDBC</b>,
                 demonstrating my ability to handle complex projects.
               </p>
               <p class="colored-text">
@@ -96,7 +95,7 @@
               <p>
                 I am excited to continue my journey, and I am always eager to
                 learn and grow in this ever-evolving industry. Feel free to contct
-                me on <b>linkedIn</b>
+                me on <b class="skillcolor"><a href="https://www.linkedin.com/in/sourya-saha-537196186" style="color: inherit;">linkedIn</a></b>
               </p>
             </div>
 
@@ -116,9 +115,10 @@
           <h1>Skills</h1>
           <ul>
             <li><i class="bi bi-check2-circle colored-text"></i> <strong>C</strong> &#8902 <strong>C++</strong> &#8902 <strong>JavaSE</strong></li>
-            <li><i class="bi bi-check2-circle colored-text"></i> <strong>JDBC</strong> &#8902 <strong>Servlet</strong></li>
-            <li><i class="bi bi-check2-circle colored-text"></i> <strong>HTML</strong> &#8902 <strong>CSS</strong></li>
-            <li><i class="bi bi-check2-circle colored-text"></i> <strong>JavaScript</strong> &#8902 <strong>TypeScript</strong></li>
+            <li><i class="bi bi-check2-circle colored-text"></i> <strong>JDBC</strong> &#8902 <strong>Servlet</strong> &#8902 <strong>JSP</strong></li>
+            <li><i class="bi bi-check2-circle colored-text"></i> <strong>Oracle</strong> &#8902 <strong>MySQL</strong></li>
+            <li><i class="bi bi-check2-circle colored-text"></i> <strong>HTML</strong> &#8902 <strong>CSS</strong> &#8902 <strong>JavaScript</strong> &#8902 <strong>TypeScript</strong> &#8902 <strong>Angular</strong>(learning)</li>
+            <li><i class="bi bi-check2-circle colored-text"></i> <strong>Tomcat Server</strong> &#8902 <strong>Glass Fish Server</strong> &#8902 <strong>Wildfly Server</strong></li>
             <li><i class="bi bi-check2-circle colored-text"></i> <strong>DSA</strong> &#8902 <strong>Problem Solving</strong></li>
           </ul>
         </div>
@@ -141,16 +141,62 @@
                 and my educational background. I also shared my experiences and my
                 contact details
               </p>
-              Link: <a href="https://souryasaha1234.github.io/portfolio/" target="_blank">my-portfolio.com</a>
+              <div class="project-link github-link">
+                <a
+                href="https://github.com/souryasaha1234/portfolio"
+                target="_blank"
+                ><i class="bi bi-github"></i> Github</a
+                >
+              </div>
+              <div class="project-link">
+                <a
+                href="https://souryasaha1234.github.io/portfolio/"
+                target="_blank"
+                ><i class="bi bi-box-arrow-up-right"></i></i> Link</a
+                >
+              </div>
             </div>
           </div>
-
+          
           <!-- projects-2 -->
           <div class="project">
             <div class="project-head">
+              <h2 class="project-name">ConvoCheck</h2>
+              <h4 class="project-status-completed">
+                <i class="bi bi-check-circle-fill"></i> completed
+              </h4>
+            </div>
+            <div class="project-body">
+              <p>
+                Convocheck is a server-side web application built for the conversions of expressions, codes, and evaluation to expressions like Postfix and Prefix evaluation.
+                This web application is built by using Servlets as the backend tool JSP as it's frontend and MySql as the database tool with Tomcat server implementation.
+              </p>
+              <div class="project-link github-link">
+                <a
+                href="https://github.com/souryasaha1234/ConvoCheck"
+                target="_blank"
+                ><i class="bi bi-github"></i> Github</a
+                >
+              </div>
+              <div class="project-link">
+                <a
+                href="https://www.youtube.com/watch?v=uz7MAlkPEcQ"
+                target="_blank"
+                ><i class="bi bi-play-circle"></i> Video Demonstration</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- projects-3 -->
+          <div class="project">
+            <div class="project-head">
               <h2 class="project-name">ATM interface</h2>
-              <h4 class="project-status-developing">
+              <!-- <h4 class="project-status-developing">
                 <i class="bi bi-cloud-slash"></i> developing
+              </h4> -->
+              <h4 class="project-status-completed">
+                <i class="bi bi-check-circle-fill"></i> completed
               </h4>
             </div>
             <div class="project-body">
@@ -165,12 +211,20 @@
                 <b>3.Deposit</b>
                 <b>4.Transfer</b>
               </p>
-              Link:
-              <a
+              <div class="project-link github-link">
+                <a
                 href="https://github.com/souryasaha1234/OIBSIP/tree/main/ATM%20Interface/com/oasis"
                 target="_blank"
-                >atm-interface.com</a
-              >
+                ><i class="bi bi-github"></i> Github</a
+                >
+              </div>
+              <div class="project-link">
+                <a
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7067464611544924160/"
+                target="_blank"
+                ><i class="bi bi-play-circle"></i> Video Demonstration</a
+                >
+              </div>
               <!-- Link: Link will be given after completion -->
             </div>
           </div>
@@ -218,22 +272,55 @@
         <!-- contacts -->
         <div id="contacts" class="body-elements">
           <h1>Contacts</h1>
-          <ul>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/sourya-saha-537196186"
-                target="_blank"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-              LinkedIn
-            </li>
-            <li>
-              <a href="https://github.com/souryasaha1234" target="_blank"
-                ><i class="bi bi-github"></i
-              ></a>
-              GitHub
-            </li>
-          </ul>
+          <div class="contact-items">
+
+            <ul>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/sourya-saha-537196186"
+                  target="_blank"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                LinkedIn
+              </li>
+              <li>
+                <a href="https://github.com/souryasaha1234" target="_blank"
+                  ><i class="bi bi-github"></i
+                ></a>
+                GitHub
+              </li>
+            </ul>
+          </div>
+
+          <!-- message-me -->
+          <div class="message-me">
+            <form action="https://formspree.io/f/mgejqzog" method="POST">
+                <table>
+                  <h1>Message me</h1>
+                  <tr>
+                      <td>Name:</td>
+                      <td class="td-right"><input type="text" name="name" placeholder="Your Name" required/></td>
+                  </tr>
+                  <tr>
+                      <td>Email:</td>
+                      <td class="td-right"><input type="email" name="email-id" placeholder="example@email" required/></td>
+                  </tr>
+                  <tr>
+                      <td>Write message:</td>
+                      <td class="td-right">
+                          <textarea name="message" cols="20" rows="5" placeholder="type your message here..." required></textarea>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td class="td-right">
+                          <input type="submit" value="Send" id="submitBtn" />
+                      </td>
+                  </tr>
+               </table>
+            </form>
+          </div>
+          <!-- end of contact  -->
         </div>
       </div>
     </div>
