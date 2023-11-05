@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background: black;
+  background-color: black;
   background: url(./img/background-theme-image.jpg);
   background-size: contain;
   background-attachment: fixed;
@@ -98,13 +98,14 @@ header {
 }
 
 .project-link {
-  display: inline;
+  display: inline-block;
   background-color: rgba(14, 202, 20, 0.6);
   width: fit-content;
   border: 5px double black;
   color: black;
   padding: 10px;
-  margin: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
   margin-left: 0px;
 }
 .project-link a {
@@ -113,6 +114,10 @@ header {
 }
 .github-link {
   background-color: rgba(255, 0, 0, 0.6);
+}
+
+.project{
+  margin-top: 70px;
 }
 
 .navigations {
