@@ -403,6 +403,9 @@ p {
   /* Styles */
   body {
     background: url(./img/background-theme-image-mobile.jpg);
+    background-color: black;
+    background-size: contain;
+    background-attachment: fixed;
   }
   header {
     font-size: 7vw;
