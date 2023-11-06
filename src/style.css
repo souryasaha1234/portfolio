@@ -5,8 +5,8 @@ html {
 }
 
 body {
-  background-color: black;
   background: url(./img/background-theme-image.jpg);
+  background-color: black;
   background-size: contain;
   background-attachment: fixed;
   color: white;
@@ -20,8 +20,15 @@ body {
   font-size: larger;
 }
 .body-elements {
-  margin-bottom: 25vw;
+  padding-top: 5vw;
+  margin-bottom: 20vw;
   transition: transform 1s, opacity 1s;
+}
+#introduction {
+  padding-top: 0vw;
+}
+#contacts {
+  margin-bottom: 0vw;
 }
 .section--hidden {
   opacity: 0;
@@ -116,7 +123,7 @@ header {
   background-color: rgba(255, 0, 0, 0.6);
 }
 
-.project{
+.project {
   margin-top: 70px;
 }
 
@@ -153,6 +160,7 @@ header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(50px);
+  z-index: 3;
 }
 
 #myBtn {
@@ -224,6 +232,7 @@ header {
 }
 .message-me input {
   height: 5vh;
+  width: 90%;
 }
 .message-me input,
 textarea {
@@ -392,15 +401,23 @@ p {
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
+  body {
+    background: url(./img/background-theme-image-mobile.jpg);
+  }
+  header {
+    font-size: 7vw;
+  }
+  #myBtn {
+    font-size: 50px;
+  }
+  #myBtn:hover {
+    color: unset;
+  }
   .mobile {
     display: block;
   }
   .desktop {
     display: none;
-  }
-  .section--hidden {
-    opacity: 1;
-    transform: none;
   }
   #demoMobile {
     font-size: 30px;
@@ -549,6 +566,9 @@ p {
   .contact-items li {
     margin: 20px;
   }
+  .contact-items li a:hover {
+    color: unset;
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -563,4 +583,7 @@ p {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
   only screen and (min-device-pixel-ratio: 1.5) {
   /* Styles */
+  .body {
+    margin: 7vw;
+  }
 }

@@ -8,10 +8,12 @@ window.addEventListener('load', function () {
 
   // Simulate a delay to demonstrate the loading effect
   setTimeout(function () {
+    document.body.style.overflow = 'visible'; // scroll visible after loading
     loadingScreen.style.display = 'none';
     content.style.display = 'block';
     content.style.opacity = 1;
-  }, 3000); // Replace this with the actual loading of your background image
+  }, 3000); 
+  document.body.style.overflow = 'hidden'; // scroll locked during loading
 });
 
 //Sticky navigation
@@ -80,7 +82,7 @@ const sectionObserver = new IntersectionObserver(revealsection, {
 
 allSection.forEach(function (section) {
   sectionObserver.observe(section);
-  section.classList.add('section--hidden');
+  // section.classList.add('section--hidden');
 });
 
 //Lazy loding
