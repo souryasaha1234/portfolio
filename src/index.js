@@ -2,17 +2,17 @@
 
 // Page loading
 window.addEventListener('load', function () {
-  topFunction();
   var loadingScreen = document.getElementById('loading-screen');
   var content = document.getElementById('content');
-
+  
   // Simulate a delay to demonstrate the loading effect
   setTimeout(function () {
+    topFunction();
     document.body.style.overflow = 'visible'; // scroll visible after loading
     loadingScreen.style.display = 'none';
     content.style.display = 'block';
     content.style.opacity = 1;
-  }, 3000); 
+  }, 3000);
   document.body.style.overflow = 'hidden'; // scroll locked during loading
 });
 
@@ -57,8 +57,9 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  // document.body.scrollTop = 0;
+  // document.documentElement.scrollTop = 0;
+  window.scrollTo(0, 0);
 }
 
 //Reveling Sections
@@ -128,4 +129,58 @@ window.addEventListener('load', function () {
   this.setTimeout(function () {
     typeWriter();
   }, 2500);
+});
+
+//navigation button
+let AboutBtnMob = document.getElementById('AboutBtnMob');
+let skillsBtnMob = document.getElementById('skillsBtnMob');
+let projectsBtnMob = document.getElementById('projectsBtnMob');
+let educationBtnMob = document.getElementById('educationBtnMob');
+let experiencesBtnMob = document.getElementById('experiencesBtnMob');
+let contactsBtnMob = document.getElementById('contactsBtnMob');
+
+AboutBtnMob.addEventListener('click', function () {
+  document.getElementById('About').scrollIntoView();
+});
+skillsBtnMob.addEventListener('click', function () {
+  document.getElementById('skills').scrollIntoView();
+});
+projectsBtnMob.addEventListener('click', function () {
+  document.getElementById('projects').scrollIntoView();
+});
+educationBtnMob.addEventListener('click', function () {
+  document.getElementById('education').scrollIntoView();
+});
+experiencesBtnMob.addEventListener('click', function () {
+  document.getElementById('experiences').scrollIntoView();
+});
+contactsBtnMob.addEventListener('click', function () {
+  document.getElementById('contacts').scrollIntoView();
+});
+
+//navigation button mobile
+let AboutBtn = document.getElementById('AboutBtn');
+let skillsBtn = document.getElementById('skillsBtn');
+let projectsBtn = document.getElementById('projectsBtn');
+let educationBtn = document.getElementById('educationBtn');
+let experiencesBtn = document.getElementById('experiencesBtn');
+let contactsBtn = document.getElementById('contactsBtn');
+
+AboutBtn.addEventListener('click', function () {
+  document.getElementById('About').scrollIntoView();
+});
+skillsBtn.addEventListener('click', function () {
+  document.getElementById('skills').scrollIntoView();
+});
+projectsBtn.addEventListener('click', function () {
+  document.getElementById('projects').scrollIntoView();
+});
+educationBtn.addEventListener('click', function () {
+  document.getElementById('education').scrollIntoView();
+});
+experiencesBtn.addEventListener('click', function () {
+  document.getElementById('experiences').scrollIntoView();
+});
+contactsBtn.addEventListener('click', function () {
+  document.getElementById('contacts').scrollIntoView();
 });
