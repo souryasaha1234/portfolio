@@ -4,7 +4,7 @@
 window.addEventListener('load', function () {
   var loadingScreen = document.getElementById('loading-screen');
   var content = document.getElementById('content');
-  
+
   // Simulate a delay to demonstrate the loading effect
   setTimeout(function () {
     topFunction();
@@ -12,6 +12,9 @@ window.addEventListener('load', function () {
     loadingScreen.style.display = 'none';
     content.style.display = 'block';
     content.style.opacity = 1;
+    typeWriter1();
+    typeWriter2();
+    typeWriter();
   }, 3000);
   document.body.style.overflow = 'hidden'; // scroll locked during loading
 });
@@ -62,30 +65,6 @@ function topFunction() {
   window.scrollTo(0, 0);
 }
 
-//Reveling Sections
-const allSection = document.querySelectorAll('.body-elements');
-
-const revealsection = function (entries, observer) {
-  const [entry] = entries;
-  // console.log(entry);
-
-  if (!entry.isIntersecting) return;
-
-  entry.target.classList.remove('section--hidden');
-  observer.unobserve(entry.target);
-};
-
-const sectionObserver = new IntersectionObserver(revealsection, {
-  root: null,
-  threshold: 0.2,
-  rootMargin: '0px',
-});
-
-allSection.forEach(function (section) {
-  sectionObserver.observe(section);
-  // section.classList.add('section--hidden');
-});
-
 //Lazy loding
 const imgTargets = document.querySelectorAll('img[data-src]');
 
@@ -111,13 +90,18 @@ const imgObserver = new IntersectionObserver(loadImg, {
 
 imgTargets.forEach(img => imgObserver.observe(img));
 
-document.querySelector('body').addEventListener('load', function () {});
-
 var i = 0;
-var txt =
-  'Welcome to my portfolio website. Please Scroll down to explore it... ⬇';
+var txt1 = 'Hello, My name is';
+var txt2 = 'Sourya Saha';
+var txt = 'Please Scroll down.. ⬇';
 var speed = 50;
 
+function typeWriter1() {
+  document.getElementById('name_demo1').innerHTML += txt1;
+}
+function typeWriter2() {
+  document.getElementById('name_demo2').innerHTML += txt2;
+}
 function typeWriter() {
   if (i < txt.length) {
     document.getElementById('demo').innerHTML += txt.charAt(i);
@@ -125,13 +109,8 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
-window.addEventListener('load', function () {
-  this.setTimeout(function () {
-    typeWriter();
-  }, 2500);
-});
 
-//navigation button
+//navigation button mobile
 let AboutBtnMob = document.getElementById('AboutBtnMob');
 let skillsBtnMob = document.getElementById('skillsBtnMob');
 let projectsBtnMob = document.getElementById('projectsBtnMob');
@@ -158,7 +137,7 @@ contactsBtnMob.addEventListener('click', function () {
   document.getElementById('contacts').scrollIntoView();
 });
 
-//navigation button mobile
+//navigation button
 let AboutBtn = document.getElementById('AboutBtn');
 let skillsBtn = document.getElementById('skillsBtn');
 let projectsBtn = document.getElementById('projectsBtn');

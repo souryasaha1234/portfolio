@@ -3,25 +3,43 @@
 html {
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 50px #212529;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
 body {
   background: url(./img/background-theme-image.jpg);
-  background-color: black;
+  /* background-color: black; */
   background-size: contain;
   background-attachment: fixed;
-  color: white;
+  /* color: white; */
   font-family: Consolas, monaco, monospace;
   margin: 0%;
-  letter-spacing: 0.1vw;
-  word-spacing: 0.3vw;
 }
 .body {
   margin: 7vw;
   font-size: larger;
+  color: white;
 }
 .body-elements {
-  padding-top: 5vw;
-  margin-bottom: 20vw;
+  padding-top: 25vh;
+  margin-bottom: 15vw;
   transition: transform 1s, opacity 1s;
 }
 #introduction {
@@ -30,11 +48,6 @@ body {
 #contacts {
   margin-bottom: 0vw;
 }
-.section--hidden {
-  opacity: 0;
-  transform: translateX(-8rem);
-}
-
 header {
   border-bottom: 1px dashed white;
   text-align: center;
@@ -55,23 +68,35 @@ header {
   border-bottom-right-radius: 0px;
   width: max-content;
   font-size: xxx-large;
+  
 }
 .body h2 {
-  text-decoration: double underline;
+  text-decoration: underline;
 }
 .education-list-element,
 .experience-list-element {
-  margin-bottom: 10vh;
+  list-style-type: none;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding: 5vh;
+  width: 80%;
+  border-radius: 25px;
+  box-shadow: 0px 0px 15px white;
 }
 .About-me {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  flex-direction: row-reverse;
+  width: 90%;
+  margin: auto;
 }
 .About-me-text {
   /* border: 1px solid white; */
   display: block;
   width: 70%;
-  padding-right: 10vw;
+  /* padding-right: 10vw; */
+  padding-left: 10vw;
 }
 .About-me-photo-elements {
   /* border: 1px solid white; */
@@ -114,17 +139,20 @@ header {
   margin-right: 30px;
   margin-top: 10px;
   margin-left: 0px;
-}
-.project-link a {
   text-decoration: none;
-  color: inherit;
+  transition: transform 0.5s ease;
+}
+.project-link:hover{
+  transform: scale(1.2);
 }
 .github-link {
   background-color: rgba(255, 0, 0, 0.6);
 }
 
 .project {
+  margin: auto;
   margin-top: 70px;
+  width: 80%;
 }
 
 .navigations {
@@ -145,6 +173,7 @@ header {
 .navigations li input[type='button']:hover {
   color: white;
   box-shadow: 0px 4px red;
+  cursor: pointer;
 }
 .navigations li {
   margin: 1.5vw;
@@ -164,6 +193,7 @@ header {
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(50px);
   z-index: 3;
+  margin-top: -1vw;
 }
 
 #myBtn {
@@ -172,7 +202,6 @@ header {
   bottom: 20px;
   right: 30px;
   z-index: 99;
-  font-size: 18px;
   border: none;
   outline: none;
   background-color: rgba(35, 8, 8, 0);
@@ -201,19 +230,28 @@ header {
 
 .contact-items li {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  font-size: 2.5vh;
+  width: fit-content;
+  margin: 20%;
+  margin-top: 0px;
+}
+.contact-items li i {
+  font-size: 10vh;
 }
 
 .contact-items li a {
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: white;
   font-size: 10vh;
+  font-size: 3vh;
+  text-align: center;
+  transition: transform 0.5s ease;
 }
 .contact-items li a:hover {
   color: red;
+  transform: scale(1.2);
+  text-shadow: 0vh 0vh 1vh red;
 }
 
 .message-me {
@@ -252,9 +290,12 @@ textarea {
   padding: 3vh;
   padding-top: 0px;
   padding-bottom: 0px;
+  transition: transform 0.5s ease;
+
 }
 .message-me input[type='submit']:hover {
   background-color: rgba(255, 0, 0, 0.9);
+  transform: scale(1.1);
   cursor: pointer;
 }
 
@@ -272,6 +313,7 @@ textarea {
 
 p {
   font-size: 4vh;
+  color: white;
 }
 
 #loading-screen {
@@ -383,12 +425,18 @@ p {
   display: block;
 }
 
-#demo {
-  font-size: 10vh;
-  /* font-weight: bolder; */
+.name_demo {
+  font-size: 7vh;
   -webkit-text-stroke-color: white;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   color: red;
+  /* margin-top: -30px;
+  margin-bottom: -30px; */
+}
+#name_demo2 {
+  font-size: 7vh;
+  font-weight: bolder;
+  color: white;
 }
 
 .mobile {
@@ -577,11 +625,6 @@ p {
   .contact-items li a:hover {
     color: unset;
   }
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Styles */
 }
 
 /* Desktops and laptops ----------- */
