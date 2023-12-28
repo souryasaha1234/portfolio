@@ -1,5 +1,6 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600');
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,7 +11,6 @@ html {
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 50px #212529;
-  
 }
 
 /* Handle */
@@ -28,7 +28,6 @@ body {
   /* background-color: black; */
   background-size: contain;
   background-attachment: fixed;
-  /* color: white; */
   font-family: Consolas, monaco, monospace;
   margin: 0%;
 }
@@ -42,8 +41,27 @@ body {
   margin-bottom: 15vw;
   transition: transform 1s, opacity 1s;
 }
+#introbox{
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+#introbox img{
+  height: fit-content;
+}
+#introbox table {
+  width: 100%;
+}
+#introbox tr {
+  height:  30%;
+}
+#introbox td {
+  height: fit-content;
+}
+
 #introduction {
   padding-top: 0vw;
+  width: fit-content;
 }
 #contacts {
   margin-bottom: 0vw;
@@ -58,7 +76,14 @@ header {
   -webkit-text-stroke-color: red;
   -webkit-text-stroke-width: 1px;
 }
-
+.profile-photo{
+  display: block;
+  width: 30%;
+  text-align: center;
+  align-self: self-end;
+  margin: auto;
+  margin-top: -150px;
+}
 .body h1 {
   background-color: rgba(255, 0, 0, 0.6);
   padding: 1vw;
@@ -68,7 +93,6 @@ header {
   border-bottom-right-radius: 0px;
   width: max-content;
   font-size: xxx-large;
-  
 }
 .body h2 {
   text-decoration: underline;
@@ -142,7 +166,7 @@ header {
   text-decoration: none;
   transition: transform 0.5s ease;
 }
-.project-link:hover{
+.project-link:hover {
   transform: scale(1.2);
 }
 .github-link {
@@ -275,6 +299,11 @@ header {
   height: 5vh;
   width: 90%;
 }
+.message-me textarea {
+  height: 100px;
+  width: 90%;
+  margin-left: 3%;
+}
 .message-me input,
 textarea {
   backdrop-filter: blur(5px);
@@ -291,7 +320,6 @@ textarea {
   padding-top: 0px;
   padding-bottom: 0px;
   transition: transform 0.5s ease;
-
 }
 .message-me input[type='submit']:hover {
   background-color: rgba(255, 0, 0, 0.9);
@@ -453,19 +481,21 @@ p {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
   body {
-    background: url(./img/background-theme-image-mobile.jpg);
     background-color: black;
-    background-size: contain;
+    background: url(./img/background-theme-image-mobile.jpg);
+    background-size: cover;
     background-attachment: fixed;
   }
   header {
     font-size: 7vw;
+    -webkit-text-stroke: unset;
+    /* position: fixed; */
   }
   #myBtn {
     font-size: 50px;
   }
   #myBtn:hover {
-    color: unset;
+    color: white;
   }
   .mobile {
     display: block;
@@ -485,6 +515,9 @@ p {
   .body h1 {
     font-size: xx-large;
     padding: 15px;
+  }
+  .body-elements {
+    padding-top: 0px;
   }
   #skills ul {
     list-style: none;
@@ -548,6 +581,7 @@ p {
     display: flex;
     width: 29px;
     height: 2px;
+    margin-left: 20px;
     margin-bottom: 5px;
     position: relative;
     background: #ffffff;
@@ -586,12 +620,13 @@ p {
   .mobile-navigations {
     display: block;
     position: fixed;
-    width: 50%;
+    width: fit-content;
     box-shadow: 0 0 10px red;
-    margin: -10px 0 0 -10px;
+    /* margin: -10px 0 0 -10px; */
     padding: 50px;
     padding-top: 30%;
-    background-color: black;
+    /* background-color: black; */
+    backdrop-filter: blur(20px);
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
@@ -612,6 +647,8 @@ p {
   }
   .About-me-text {
     width: 100%;
+    margin-top: 40px;
+    padding-left: 0vw;
   }
   .About-me-photo-elements {
     width: 100%;
@@ -624,6 +661,14 @@ p {
   }
   .contact-items li a:hover {
     color: unset;
+  }
+  .project-link:hover {
+    transform: none;
+  }
+  .contact-items li a:hover {
+    color: white;
+    transform: none;
+    text-shadow: 0vh 0vh 0vh red;
   }
 }
 

@@ -24,11 +24,9 @@ const navigation = document.querySelector('.navigation');
 
 const headerEl = document.querySelector('.headerEl');
 const navHeight = navigation.getBoundingClientRect().height;
-
 const stickyNav = function (entries) {
   const [entry] = entries;
   // console.log(entry);
-
   if (!entry.isIntersecting) navigation.classList.add('sticky');
   else navigation.classList.remove('sticky');
 };

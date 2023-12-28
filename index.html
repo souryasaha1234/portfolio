@@ -21,8 +21,7 @@
     <div id="content" class="hidden">
       <!-- website content goes here -->
       <header class="headerEl">
-        <!-- <h1>Sourya Saha - Portfolio</h1> -->
-        Sourya Saha - Portfolio
+        <span class="colored-text">S</span>ourya <span class="colored-text">S</span>aha - <span class="colored-text">Portfolio</span>
       </header>
       <nav class="navigation">
         <ul class="navigations">
@@ -37,10 +36,10 @@
       
       <nav class="mobile-navigation mobile" role="navigation">
         <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
+            <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
           <ul class="mobile-navigations">
             <li><input type="button" id="AboutBtnMob" value="About"></li>
             <li><input type="button" id="skillsBtnMob" value="Skills"></li>
@@ -58,10 +57,28 @@
 
       <div class="body">
         <!-- introduction -->
-        <div id="introduction" class="body-elements desktop">
-          <p id="name_demo1" class="name_demo"></p>
-          <p id="name_demo2" class="name_demo"></p>
-          <p id="demo" class="name_demo"></p>
+        <div id="introbox" class=" desktop">
+          <table>
+            <tr>
+              <td>
+                <div id="introduction" class="body-elements">
+                  <p id="name_demo1" class="name_demo"></p>
+                  <p id="name_demo2" class="name_demo"></p>
+                  <p id="demo" class="name_demo"></p>
+                </div>
+              </td>
+              <td>
+                <div class="profile-photo">
+                  <img
+                    src="./src/img/Photo-new-lazy.jpg"
+                    data-src="./src/img/Photo-new.jpg"
+                    alt="Sourya Saha profile photo"
+                    class="About-me-photo lazy-img"
+                  >
+                </div>
+              </td>
+            </tr>
+          </table>
         </div>
 
         <div id="introduction" class="body-elements mobile">
@@ -72,7 +89,7 @@
         <div id="About" class="body-elements">
           <h1>About me</h1>
           <div class="About-me">
-            <div class="About-me-text" data-aos="zoom-in-right">
+            <div class="About-me-text" data-aos="zoom-in-left">
               <p class="colored-text">
                 Hello! I am <b>Sourya Saha</b>, a passionate third-year <b>B.Tech</b> student
                 specializing in <b>Computer Science and Engineering</b> at the Academy of
@@ -85,26 +102,26 @@
                 frontend technologies such as <b class="skillcolor">HTML</b>, <b class="skillcolor">CSS</b>,
                 <b class="skillcolor">JavaScript</b> and <b class="skillcolor">TypeScript</b>. I've just scratched the surface of learning <b class="skillcolor">Angular</b>.
               </p>
-              <p data-aos="fade-right">
+              <p data-aos="zoom-in-right">
                 My knack for problem-solving has been instrumental in my 
                 <b>application</b> of <b class="skillcolor">JDBC</b> and <b class="skillcolor">Servlets</b>. I have
                 successfully developed <b>layered applications</b> on <b class="skillcolor">JDBC</b>,
                 demonstrating my ability to handle complex projects.
               </p>
-              <p class="colored-text" data-aos="fade-left">
+              <p class="colored-text" data-aos="zoom-in-left">
                 In addition, I have gained valuable experience in building
                 <b style="color: rgb(243, 97, 97);">user interface-based fronend projects</b>. This experience,
                 coupled with my theoretical knowledge and practical skills, helps
                 me to be a versatile developer.
               </p>
-              <p data-aos="fade-right">
+              <p data-aos="zoom-in-right">
                 I am excited to continue my journey, and I am always eager to
                 learn and grow in this ever-evolving industry. Feel free to contct
                 me on <b class="skillcolor"><a href="https://www.linkedin.com/in/sourya-saha-537196186" target="_blank" style="color: inherit;">linkedIn</a></b> <i class="bi bi-box-arrow-up-right"></i>
               </p>
             </div>
 
-            <div class="About-me-photo-elements" data-aos="zoom-in-left">
+            <div class="About-me-photo-elements" data-aos="zoom-in-right">
               <img
                 src="./src/img/profile-photo-lazy.jpg"
                 data-src="./src/img/profile-photo.jpg"
@@ -119,21 +136,21 @@
         <div id="skills" class="body-elements">
           <h1>Skills</h1>
           <ul>
-            <li data-aos="fade-left"><i class="bi bi-check2-circle colored-text"></i> <strong>C</strong> &#8902 <strong>C++</strong> &#8902 <strong>JavaSE</strong></li>
-            <li data-aos="fade-left"><i class="bi bi-check2-circle colored-text"></i> <strong>JDBC</strong> &#8902 <strong>Servlet</strong> &#8902 <strong>JSP</strong></li>
-            <li data-aos="fade-left"><i class="bi bi-check2-circle colored-text"></i> <strong>Oracle</strong> &#8902 <strong>MySQL</strong></li>
-            <li data-aos="fade-left"><i class="bi bi-check2-circle colored-text"></i> <strong>HTML</strong> &#8902 <strong>CSS</strong> &#8902 <strong>JavaScript</strong> &#8902 <strong>TypeScript</strong> &#8902 <strong>Angular</strong>(learning)</li>
-            <li data-aos="fade-left"><i class="bi bi-check2-circle colored-text"></i> <strong>Tomcat Server</strong> &#8902 <strong>Glass Fish Server</strong> &#8902 <strong>Wildfly Server</strong></li>
-            <li data-aos="fade-left"><i class="bi bi-check2-circle colored-text"></i> <strong>DSA</strong> &#8902 <strong>Problem Solving</strong></li>
+            <li data-aos="zoom-in-left"><i class="bi bi-check2-circle colored-text"></i> <strong>C</strong> &#8902 <strong>C++</strong> &#8902 <strong>JavaSE</strong></li>
+            <li data-aos="zoom-in-left"><i class="bi bi-check2-circle colored-text"></i> <strong>JDBC</strong> &#8902 <strong>Servlet</strong> &#8902 <strong>JSP</strong></li>
+            <li data-aos="zoom-in-left"><i class="bi bi-check2-circle colored-text"></i> <strong>Oracle</strong> &#8902 <strong>MySQL</strong></li>
+            <li data-aos="zoom-in-left"><i class="bi bi-check2-circle colored-text"></i> <strong>HTML</strong> &#8902 <strong>CSS</strong> &#8902 <strong>JavaScript</strong> &#8902 <strong>TypeScript</strong> &#8902 <strong>Angular</strong>(learning)</li>
+            <li data-aos="zoom-in-left"><i class="bi bi-check2-circle colored-text"></i> <strong>Tomcat Server</strong> &#8902 <strong>Glass Fish Server</strong> &#8902 <strong>Wildfly Server</strong></li>
+            <li data-aos="zoom-in-left"><i class="bi bi-check2-circle colored-text"></i> <strong>DSA</strong> &#8902 <strong>Problem Solving</strong></li>
           </ul>
         </div>
 
         <!-- project section -->
-        <div id="projects" class="body-elements" data-aos="zoom-in-left">
+        <div id="projects" class="body-elements">
           <h1>Projects</h1>
 
           <!-- projects-1 -->
-          <div class="project">
+          <div class="project" data-aos="zoom-in-right">
             <div class="project-head">
               <h2 class="project-name">ConvoCheck</h2>
               <h4 class="project-status-completed">
@@ -159,7 +176,7 @@
           </div>
 
           <!-- projects-2 -->
-          <div class="project" data-aos="fade-left">
+          <div class="project" data-aos="zoom-in-left">
             <div class="project-head">
               <h2 class="project-name">ATM interface</h2>
               <!-- <h4 class="project-status-developing">
@@ -200,21 +217,21 @@
         <div id="education" class="body-elements">
           <h1>Education</h1>
           <ul class="education-list">
-            <li class="education-list-element colored-text" data-aos="fade-right">
+            <li class="education-list-element colored-text" data-aos="zoom-in-right">
               <h2>Academy of Technology</h2>
               <p>B.Tech in Computer Science and Technology</p>
               <p>Aug 2021 - present | Hooghly, WB</p>
               <!-- <p>CGPA</p> -->
             </li>
 
-            <li class="education-list-element" data-aos="fade-left">
+            <li class="education-list-element" data-aos="zoom-in-left">
               <h2>Jirat Colony High School</h2>
               <p>Higher Secondary</p>
               <p>Mar 2021 | Hooghly, WB</p>
               <p>Marks: 89%</p>
             </li>
 
-            <li class="education-list-element" data-aos="fade-right">
+            <li class="education-list-element" data-aos="zoom-in-right">
               <h2>Jirat Colony High School</h2>
               <p>Secondary</p>
               <p>Mar 2019 | Hooghly, WB</p>
@@ -227,7 +244,7 @@
         <div id="experiences" class="body-elements">
           <h1>Experiences</h1>
           <ul>
-            <li class="experience-list-element" data-aos="fade-left">
+            <li class="experience-list-element" data-aos="zoom-in-left">
               <h2>Oasis Infobyte</h2>
               <h4>Java development intern</h4>
               <p>May 2023 - June 2023 | Kolkata, WB</p>
@@ -259,7 +276,7 @@
           </div>
 
           <!-- message-me -->
-          <div class="message-me" data-aos="fade-left">
+          <div class="message-me" data-aos="zoom-in-left">
             <form action="https://formspree.io/f/mgejqzog" method="POST">
                 <table>
                   <h1>Message me</h1>
@@ -274,7 +291,7 @@
                   <tr>
                       <td>Write message:</td>
                       <td class="td-right">
-                          <textarea name="message" cols="20" rows="5" placeholder="type your message here..." required></textarea>
+                          <textarea name="message" placeholder="type your message here..." required></textarea>
                       </td>
                   </tr>
                   <tr>
@@ -296,8 +313,8 @@
     <script>
       AOS.init({
         duration: 1000,
-        delay: 100,
-        offset: window.innerHeight*0.6,
+        delay: 200,
+        offset: window.innerHeight*0.3,
       });
     </script>
   </body>
