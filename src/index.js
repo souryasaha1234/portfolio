@@ -12,6 +12,7 @@ window.addEventListener('load', function () {
     loadingScreen.style.display = 'none';
     content.style.display = 'block';
     content.style.opacity = 1;
+    canvas.style.opacity = 1;
     typeWriter1();
     typeWriter2();
     typeWriter();
