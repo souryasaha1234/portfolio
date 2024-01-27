@@ -6,17 +6,17 @@ const { canvas } = c;
 const points = [];
 
 // Properties
-let pointsCount = 120;
-const pointRadius = 1;
+let pointsCount = 50;
+const pointRadius = 3;
 const pointVelocity = 1;
-const maxDistBetweenPoint = 150;
-const maxLineWidth = 4;
-const renderPoints = false;
+const maxDistBetweenPoint = 250;
+const maxLineWidth = 3;
+const renderPoints = true;
 const bokehBackground = false;
 const glow = false;
 
 if (window.innerWidth >= 320 && window.innerWidth <= 480) {
-  pointsCount = 50;
+  pointsCount = 30;
 }
 
 //
@@ -65,7 +65,7 @@ const loop = () => {
 
   c.fillRect(0, 0, canvas.width, canvas.height);
 
-  c.fillStyle = '#fff';
+  c.fillStyle = 'hsl(358, 65%, 40%)';
   points.forEach(point => {
     if (renderPoints) {
       c.beginPath();
