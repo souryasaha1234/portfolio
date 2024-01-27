@@ -1,10 +1,12 @@
-const c = document.body.appendChild(document.createElement('canvas')).getContext('2d');
+const c = document.body
+  .appendChild(document.createElement('canvas'))
+  .getContext('2d');
 const { canvas } = c;
 
 const points = [];
 
 // Properties
-const pointsCount = 120;
+let pointsCount = 120;
 const pointRadius = 1;
 const pointVelocity = 1;
 const maxDistBetweenPoint = 150;
@@ -12,6 +14,10 @@ const maxLineWidth = 4;
 const renderPoints = false;
 const bokehBackground = false;
 const glow = false;
+
+if (window.innerWidth >= 320 && window.innerWidth <= 480) {
+  pointsCount = 50;
+}
 
 //
 let frame = 0;
@@ -55,7 +61,7 @@ const loop = () => {
 
   c.fillStyle = '#000';
   c.position = 'absolute';
-  c.top = '0'
+  c.top = '0';
 
   c.fillRect(0, 0, canvas.width, canvas.height);
 
