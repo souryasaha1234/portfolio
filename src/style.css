@@ -47,7 +47,7 @@ canvas {
 }
 .body-elements {
   padding-top: 25vh;
-  margin-bottom: 15vw;
+  margin-bottom: 10vh;
   transition: transform 1s, opacity 1s;
 }
 #introbox {
@@ -106,17 +106,27 @@ canvas {
 }
 .body h2 {
   text-decoration: underline;
+  font-size: 1.7em;
 }
 .education-list-element,
 .experience-list-element {
   list-style-type: none;
   margin: auto;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   padding: 5vh;
-  width: 80%;
+  width: 70%;
+  outline: 3px solid black;
+  outline-offset: -10px;
   border-radius: 25px;
   box-shadow: 0px 0px 15px white;
+  background-color: rgba(242, 233, 233, 0.1);
+  backdrop-filter: blur(2px);
+}
+.education-list-table,
+.experience-list-table {
+  width: 100%;
+  line-height: 10px;
 }
 .About-me {
   display: flex;
@@ -155,6 +165,7 @@ canvas {
   border-radius: 10rem;
   width: fit-content;
   padding: 0.3vw;
+  margin-left: 30%;
 }
 .project-status-developing {
   background-color: red;
@@ -186,7 +197,11 @@ canvas {
 .project {
   margin: auto;
   margin-top: 70px;
-  width: 80%;
+  width: 90%;
+}
+.project-head table {
+  width: 100%;
+  margin-bottom: -30px;
 }
 
 .navigations {
@@ -201,9 +216,11 @@ canvas {
   background: transparent;
   border: none;
   font-size: 2vw;
+  transition: transform 0.5s ease;
 }
 .navigations li input[type='button']:hover {
   color: white;
+  transform: scale(1.2);
   box-shadow: 0px 4px red;
   cursor: pointer;
 }
@@ -530,6 +547,28 @@ p {
   .experience-list-element {
     width: 70%;
     margin-left: -5vw;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    text-align: center;
+  }
+  .education-list-element h2,
+  .experience-list-element h2 {
+    font-size: unset;
+  }
+  .education-list-table,
+  .experience-list-table {
+    line-height: unset;
+  }
+  .education-list-table tr,
+  .experience-list-table tr {
+    display: block;
+    float: left;
+  }
+  .education-list-table th,
+  .education-list-table td,
+  .experience-list-table th,
+  .experience-list-table td {
+    display: block;
   }
   .desktop {
     display: none;
@@ -691,6 +730,20 @@ p {
   }
   .contact-items li {
     margin: 20px;
+  }
+  .project-head table tr {
+    display: block;
+    float: left;
+  }
+  .project-head table td {
+    display: block;
+  }
+  .project-status-completed {
+    margin-left: 0px;
+  }
+  .project-link {
+    margin: auto;
+    width: min-content;
   }
   .contact-items li a:hover {
     color: unset;
