@@ -162,3 +162,19 @@ experiencesBtn.addEventListener('click', function () {
 contactsBtn.addEventListener('click', function () {
   document.getElementById('contacts').scrollIntoView();
 });
+
+//form submit
+function messageMeSubmit() {
+  var myform = document.getElementById('messageForm');
+  var data = new FormData(myform);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://formspree.io/f/mgejqzog');
+  xhr.send(data);
+
+  document.getElementById('myFrm-name').value = '';
+  document.getElementById('myFrm-email-id').value = '';
+  document.getElementById('myFrm-message').value = '';
+  // PREVENT HTML FORM SUBMIT
+  return false;
+}
