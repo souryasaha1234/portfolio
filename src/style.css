@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600');
 @import url('https://fonts.bunny.net/css?family=barlow:400,500&display=swap');
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -42,6 +41,37 @@ canvas {
   margin: auto;
   opacity: 0;
 }
+#myVideo {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  filter: grayscale(0.3);
+  z-index: -2;
+}
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+}
+.vidCover {
+  position: absolute;
+  z-index: -1;
+  min-height: 100%;
+  width: 100%;
+  content: '';
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 1, 0),
+    rgba(0, 0, 1, 0.3),
+    rgba(0, 0, 1, 0.4),
+    rgba(0, 0, 1, 0.5),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 1)
+  );
+}
 .body {
   margin: 7vw;
   font-size: larger;
@@ -51,6 +81,17 @@ canvas {
   padding-top: 25vh;
   margin-bottom: 10vh;
   transition: transform 1s, opacity 1s;
+  min-height: 100vh;
+}
+.headerEl {
+  text-align: center;
+  font-size: 5vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  -webkit-text-stroke-color: red;
+  -webkit-text-stroke-width: 1px;
+  backdrop-filter: blur(10px);
 }
 #introbox {
   display: flex;
@@ -60,33 +101,12 @@ canvas {
 #introbox img {
   height: fit-content;
 }
-#introbox table {
-  width: 100%;
-}
-#introbox tr {
-  height: 30%;
-}
-#introbox td {
-  height: fit-content;
-}
-
 #introduction {
   padding-top: 0vw;
-  width: fit-content;
+  width: 70%;
 }
 #contacts {
   margin-bottom: 0vw;
-}
-.headerEl {
-  border-bottom: 1px dashed white;
-  text-align: center;
-  font-size: 5vw;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  -webkit-text-stroke-color: red;
-  -webkit-text-stroke-width: 1px;
-  backdrop-filter: blur(2px);
 }
 .profile-photo {
   display: block;
@@ -94,7 +114,30 @@ canvas {
   text-align: center;
   align-self: self-end;
   margin: auto;
-  margin-top: -150px;
+  margin-top: -13vh;
+}
+.name_demo {
+  font-size: 8vh;
+  margin: 0px;
+  color: white;
+}
+#name_demo2 {
+  font-weight: bolder;
+  color: red;
+}
+.iam {
+  color: white;
+  padding-right: 15px;
+  font-family: sans-serif;
+}
+.text {
+  font-family: sans-serif;
+  color: rgb(255, 30, 0);
+}
+.intro-container {
+  display: flex;
+  font-size: 6vh;
+  font-weight: bolder;
 }
 .body h1 {
   background-color: rgba(255, 0, 0, 0.6);
@@ -143,6 +186,7 @@ canvas {
   width: 70%;
   /* padding-right: 10vw; */
   padding-left: 10vw;
+  text-align: justify;
 }
 .About-me-photo-elements {
   /* border: 1px solid white; */
@@ -325,12 +369,10 @@ canvas {
 }
 .message-me input {
   height: 5vh;
-  width: 90%;
 }
 .message-me textarea {
-  height: 100px;
-  width: 90%;
-  margin-left: 3%;
+  height: 150px;
+  /* margin-left: 3%; */
 }
 .message-me input,
 textarea {
@@ -344,6 +386,7 @@ textarea {
   padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
+  width: 40vw;
 }
 .message-me input[type='submit'] {
   background-color: rgba(255, 0, 0, 0.6);
@@ -351,6 +394,8 @@ textarea {
   padding-top: 0px;
   padding-bottom: 0px;
   transition: transform 0.5s ease;
+  width: fit-content;
+  /* margin-left: 50%; */
 }
 .message-me input[type='submit']:hover {
   background-color: rgba(255, 0, 0, 0.9);
@@ -486,18 +531,6 @@ p {
   z-index: 4;
 }
 
-.name_demo {
-  font-size: 7vh;
-  -webkit-text-stroke-color: white;
-  -webkit-text-stroke-width: 1px;
-  color: red;
-}
-#name_demo2 {
-  font-size: 7vh;
-  font-weight: bolder;
-  color: white;
-}
-
 .mobile {
   display: none;
 }
@@ -520,7 +553,7 @@ p {
     background-attachment: fixed;
   }
   .headerEl {
-    font-size: 7vw;
+    font-size: 13vw;
     -webkit-text-stroke: unset;
     /* position: fixed; */
   }
@@ -536,19 +569,23 @@ p {
   #introbox {
     margin-top: 0vh;
   }
-  .message-me {
-    width: 70%;
+  #myVideo {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
   }
   .message-me input,
   textarea {
-    margin: 0px;
+    /* margin: 0px; */
     padding: 0px;
     padding-left: 5px;
   }
   .education-list-element,
   .experience-list-element {
-    width: 70%;
-    margin-left: -5vw;
+    width: fit-content;
+    /* margin-left: -5vw; */
     padding-left: 5vh;
     padding-right: 5vh;
     text-align: center;
@@ -571,6 +608,26 @@ p {
   .experience-list-table th,
   .experience-list-table td {
     display: block;
+  }
+  #introbox {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #introduction {
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 10vw;
+    width: 100%;
+  }
+  .intro-container {
+    font-size: 25px;
+  }
+  .name_demo {
+    font-size: 30px;
+  }
+  .profile-photo {
+    width: 80%;
+    margin-top: 0vh;
   }
   .desktop {
     display: none;
@@ -746,6 +803,10 @@ p {
   .project-link {
     margin: auto;
     width: min-content;
+  }
+  .message-me textarea,
+  .message-me input {
+    width: 100%;
   }
   .contact-items li a:hover {
     color: unset;

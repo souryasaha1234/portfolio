@@ -17,8 +17,11 @@
     </div>
     <div id="content" class="hidden">
       <!-- website content goes here -->
-      <header class="headerEl">
+      <header class="headerEl desktop">
         <span class="colored-text">S</span>ourya <span class="colored-text">S</span>aha - <span class="colored-text">Portfolio</span>
+      </header>
+      <header class="headerEl mobile">
+        <span class="colored-text">S</span>ourya <span class="colored-text">S</span>aha
       </header>
       <nav class="navigation">
         <ul class="navigations">
@@ -54,32 +57,30 @@
 
       <div class="body">
         <!-- introduction -->
-        <div id="introbox" class="desktop">
-          <table>
-            <tr>
-              <td>
-                <div id="introduction" class="body-elements desktop">
-                  <p id="name_demo1" class="name_demo"></p>
-                  <p id="name_demo2" class="name_demo"></p>
-                  <p id="demo" class="name_demo"></p>
-                </div>
-              </td>
-              <td>
-                <div class="profile-photo desktop">
-                  <img
-                    src="./src/img/Photo-new-lazy.jpg"
-                    data-src="./src/img/Photo-new.jpg"
-                    alt="Sourya Saha profile photo"
-                    class="About-me-photo lazy-img"
-                  >
-                </div>
-              </td>
-            </tr>
-          </table>
+        <div class="home">
+          <div class="vidCover"></div>
+          <video playsinline="playsinline" autoplay muted loop id="myVideo">
+            <source src="./src/img/bg-vid.mp4" type="video/mp4">
+          </video>
         </div>
-
-        <div id="introduction" class="body-elements mobile">
-          <p id="demoMobile">Welcome to my portfolio website.</p>
+        <div id="introbox">
+          <div id="introduction" class="body-elements ">
+            <p class="name_demo">Hello,</p>
+            <p class="name_demo">My name is</p>
+            <p id="name_demo2" class="name_demo">Sourya Saha</p>
+            <div class="intro-container">
+              <div class="iam">I'm a</div>
+              <div class="text"></div>
+            </div>
+          </div>
+          <div class="profile-photo ">
+            <img
+              src="./src/img/Photo-new-lazy.jpg"
+              data-src="./src/img/Photo-new.jpg"
+              alt="Sourya Saha profile photo"
+              class="About-me-photo lazy-img"
+            >
+          </div>
         </div>
 
         <!--About section-->
@@ -89,29 +90,23 @@
             <div class="About-me-text" data-aos="zoom-in-left">
               <p class="colored-text">
                 Hello! I am <b>Sourya Saha</b>, a passionate third-year <b>B.Tech</b> student
-                specializing in <b>Computer Science and Engineering</b> at the Academy of
-                Technology, Hooghly, WB.
+                specializing in <b>Computer Science and Engineering</b> (CSE).
               </p>
               <p>
-                My fascination with the constructive aspects of CS has led me into the world of
-                <b class="skillcolor">Full-stack web development</b>. I have honed my skills in
+                I am enthusiastic in
+                <b>Full-stack web development</b>. I have honed my skills in
                 <b class="skillcolor">JavaSE</b> and <b class="skillcolor">C++</b>, and have a solid foundation in
-                frontend technologies such as <b class="skillcolor">HTML</b>, <b class="skillcolor">CSS</b>,
-                <b class="skillcolor">JavaScript</b> and <b class="skillcolor">TypeScript</b>. I've just scratched the surface of learning <b class="skillcolor">Angular</b>.
+                <b class="skillcolor">HTML</b>, <b class="skillcolor">CSS</b>, <b class="skillcolor">JavaScript</b> and 
+                <b class="skillcolor">TypeScript</b>. Currrently I'm learning 
+                <b class="skillcolor">Angular</b> framework.
               </p>
               <p data-aos="zoom-in-right">
-                My knack for problem-solving has been instrumental in my 
-                <b>application</b> of <b class="skillcolor">JDBC</b> and <b class="skillcolor">Servlets</b>. I have
-                successfully developed <b>layered applications</b> on <b class="skillcolor">JDBC</b>,
-                demonstrating my ability to handle complex projects.
+                I have successfully developed <b>layered applications</b> using <b class="skillcolor">JDBC</b>,
+                <b class="skillcolor">Servlets</b>, and <b class="skillcolor">JSP</b>.
+                In addition, I have gained valuable experience in building
+                <b class="skillcolor">UI</b>-based projects.
               </p>
               <p class="colored-text" data-aos="zoom-in-left">
-                In addition, I have gained valuable experience in building
-                <b style="color: rgb(243, 97, 97);">user interface-based fronend projects</b>. This experience,
-                coupled with my theoretical knowledge and practical skills, helps
-                me to be a versatile developer.
-              </p>
-              <p data-aos="zoom-in-right">
                 I am excited to continue my journey, and I am always eager to
                 learn and grow in this ever-evolving industry. Feel free to contct
                 me on <b class="skillcolor"><a href="https://www.linkedin.com/in/sourya-saha-537196186" target="_blank" style="color: inherit;"><u>linkedIn</u> <i class="bi bi-box-arrow-up-right"></i></a></b> 
@@ -426,6 +421,7 @@
     </div>
 
     <!-- aos animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./src/index.js"></script>
@@ -437,6 +433,5 @@
         offset: window.innerHeight*0.3,
       });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>

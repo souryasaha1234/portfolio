@@ -13,9 +13,6 @@ window.addEventListener('load', function () {
     content.style.display = 'block';
     content.style.opacity = 1;
     canvas.style.opacity = 1;
-    typeWriter1();
-    typeWriter2();
-    typeWriter();
   }, 3000);
   document.body.style.overflow = 'hidden'; // scroll locked during loading
 });
@@ -89,26 +86,6 @@ const imgObserver = new IntersectionObserver(loadImg, {
 
 imgTargets.forEach(img => imgObserver.observe(img));
 
-var i = 0;
-var txt1 = 'Hello, My name is';
-var txt2 = 'Sourya Saha';
-var txt = 'Please Scroll down.. ⬇';
-var speed = 50;
-
-function typeWriter1() {
-  document.getElementById('name_demo1').innerHTML += txt1;
-}
-function typeWriter2() {
-  document.getElementById('name_demo2').innerHTML += txt2;
-}
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById('demo').innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-
 //navigation button mobile
 let AboutBtnMob = document.getElementById('AboutBtnMob');
 let skillsBtnMob = document.getElementById('skillsBtnMob');
@@ -178,3 +155,19 @@ function messageMeSubmit() {
   // PREVENT HTML FORM SUBMIT
   return false;
 }
+
+var typing = new Typed('.text', {
+  strings: [
+    '',
+    'Full stack Developer',
+    'Java Developer',
+    'Web Developer',
+    'Designer',
+    'Programmer',
+    'Competitive Coder',
+    'Learner',
+  ],
+  typeSpeed: 100,
+  backSpeed: 40,
+  loop: true,
+});
