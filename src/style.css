@@ -553,9 +553,9 @@ p {
     background-attachment: fixed;
   }
   .headerEl {
-    font-size: 13vw;
+    font-size: 10vw;
     -webkit-text-stroke: unset;
-    /* position: fixed; */
+    backdrop-filter: blur(20px);
   }
   #myBtn {
     font-size: 50px;
