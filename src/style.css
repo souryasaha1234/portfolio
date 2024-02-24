@@ -44,7 +44,7 @@ canvas {
 #myVideo {
   position: relative;
   min-height: 100vh;
-  width: 100%;
+  width: 99vw;
   filter: grayscale(0.3);
   z-index: -2;
 }
@@ -576,6 +576,7 @@ p {
   #myVideo {
     position: relative;
     min-height: 100vh;
+    width: unset;
     width: 100%;
     object-fit: cover;
     object-position: left;
