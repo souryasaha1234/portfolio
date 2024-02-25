@@ -848,8 +848,8 @@ p {
   }
   .project:hover {
     color: unset;
-    font-weight: bold;
-    box-shadow: 0px 0px 15px red;
+    font-weight: unset;
+    box-shadow: unset;
   }
   .project-link {
     margin-left: 0px;
