@@ -150,7 +150,7 @@ canvas {
 }
 .body h2 {
   text-decoration: underline;
-  font-size: 1.7em;
+  /* font-size: 1.7em; */
 }
 .education-list-element,
 .experience-list-element {
@@ -200,6 +200,28 @@ canvas {
   filter: blur(5px);
 }
 
+.project {
+  border-radius: 30px;
+  padding: 40px;
+  margin: auto;
+  margin-top: 70px;
+  width: 90%;
+  box-shadow: 0px 0px 15px white;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+}
+.project p {
+  color: inherit;
+}
+.project h4 {
+  color: white;
+}
+.project:hover {
+  color: red;
+  font-weight: bold;
+  box-shadow: 0px 0px 15px red;
+}
+
 .project-status-completed,
 .project-status-developing {
   background-color: green;
@@ -235,11 +257,6 @@ canvas {
   background-color: rgba(255, 0, 0, 0.6);
 }
 
-.project {
-  margin: auto;
-  margin-top: 70px;
-  width: 90%;
-}
 .project-head table {
   width: 100%;
 }
@@ -251,9 +268,13 @@ canvas {
 .techStack {
   display: flex;
   flex-direction: column;
-  border: 3px solid wheat;
+  border: 2px solid white;
   padding: 20px;
+  padding-top: 5px;
   border-radius: 20px;
+  border-top: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   width: fit-content;
 }
 .navigations {
@@ -820,6 +841,15 @@ p {
   }
   .project-ref {
     flex-direction: column;
+  }
+  .project {
+    padding: 20px;
+    width: unset;
+  }
+  .project:hover {
+    color: unset;
+    font-weight: bold;
+    box-shadow: 0px 0px 15px red;
   }
   .project-link {
     margin-left: 0px;
