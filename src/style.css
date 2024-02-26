@@ -844,7 +844,6 @@ p {
   }
   .project {
     padding: 20px;
-    width: unset;
   }
   .project:hover {
     color: unset;
