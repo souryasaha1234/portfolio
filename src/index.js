@@ -147,6 +147,7 @@ function messageMeSubmit() {
 
   var xhr = new XMLHttpRequest();
   xhr.open('POST', 'https://formspree.io/f/mgejqzog');
+  showSuccess();
   xhr.send(data);
 
   document.getElementById('myFrm-name').value = '';
@@ -171,3 +172,27 @@ var typing = new Typed('.text', {
   backSpeed: 40,
   loop: true,
 });
+
+const successBtnElement = document.querySelector(
+  '.js_success-animation-trigger'
+);
+
+const pendingClassName = 'loading-btn--pending';
+const successClassName = 'loading-btn--success';
+
+const stateDuration = 1500;
+
+let showSuccess = function () {
+  const elem = successBtnElement;
+  elem.classList.add(pendingClassName);
+
+  window.setTimeout(() => {
+    elem.classList.remove(pendingClassName);
+    elem.classList.add(successClassName);
+
+    window.setTimeout(
+      () => elem.classList.remove(successClassName),
+      stateDuration
+    );
+  }, stateDuration);
+};

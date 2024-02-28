@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+.loading-btn-wrapper {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+
+.loading-btn {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: red;
+  border: 0;
+  border-radius: 24px;
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.6);
+  padding: 3vh;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  transition: transform 0.5s ease;
+}
+.loading-btn:hover {
+  background-color: rgba(255, 0, 0, 0.9);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.loading-btn,
+.loading-btn:focus {
+  outline: none;
+}
+.loading-btn--pending,
+.loading-btn--success {
+  width: 40px;
+  pointer-events: none;
+  cursor: default;
+}
+.loading-btn--pending .loading-btn__text,
+.loading-btn--success .loading-btn__text {
+  opacity: 0;
+}
+.loading-btn--pending:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  height: 28px;
+  width: 28px;
+  border: 3px solid rgba(255, 255, 255, 0.33);
+  border-top-color: #fff;
+  border-radius: 50%;
+  -webkit-animation: loading-btn--fade-in 0.33s ease,
+    loading-btn--rotation 0.66s linear 0s infinite;
+  animation: loading-btn--fade-in 0.33s ease,
+    loading-btn--rotation 0.66s linear 0s infinite;
+}
+.loading-btn--success,
+.loading-btn--success:hover {
+  background: #8bc34a;
+}
+.loading-btn--success:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  height: 25%;
+  width: 50%;
+  border: 3px solid #fff;
+  border-top-width: 0;
+  border-right-width: 0;
+  transform: translate(-50%, -75%) rotate(-45deg);
+  -webkit-animation: loading-btn--fade-in 0.6s ease;
+  animation: loading-btn--fade-in 0.6s ease;
+}
+
+.loading-btn__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #fff;
+  transition: inherit;
+}
+
+/**
+ * Animations
+ */
+@-webkit-keyframes loading-btn--fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loading-btn--fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes loading-btn--rotation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes loading-btn--rotation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/**
+ * Optical stuff - has nothing todo with button animation.
+ */
+.state-list {
+  margin-bottom: 12px;
+}
+.state-list .loading-btn-wrapper {
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 10px,
+    #f0f0f0 10px,
+    #f0f0f0 20px
+  );
+}
+
+.loading-btn-wrapper + .loading-btn-wrapper {
+  margin-left: 8px;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .loading-btn:hover {
+    background-color: unset;
+    transform: unset;
+    cursor: unset;
+  }
+}

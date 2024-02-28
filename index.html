@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/success.css" />
     <link rel="icon" type="image/jpg" href="./src/img/portfoiio-icon.png" />
   </head>
   <body>
@@ -142,6 +143,7 @@
 
           <!-- projects-1 -->
           <div class="project" data-aos="zoom-in-right">
+            <center><img class="project_img" src="./src/img/project-snaps/SaleScope-snapshot.jpg" alt="proj_img"></center>
             <div class="project-head">
               <table>
                 <tr>
@@ -156,7 +158,7 @@
             </div>
             <div class="project-body">
               <p>
-                Salescope is a Full-stack Sales report operations and visulalization application with user authentication and account support.
+                Salescope is a Full-stack <b>Sales report operations</b> and <b>visulalization</b> application with <b>user authentication</b> and account support.
               </p>
               <div class="project-ref">
                 <div class="techStack">
@@ -188,6 +190,7 @@
 
           <!-- projects-2 -->
           <div class="project" data-aos="zoom-in-left">
+            <center><img class="project_img" src="./src/img/project-snaps/ConvoCheck-snapshot.jpg" alt="proj_img"></center>
             <div class="project-head">
               <table>
                 <tr>
@@ -202,7 +205,7 @@
             </div>
             <div class="project-body">
               <p>
-                Convocheck is a server-side web-app for conversion of expressions, codes, and evaluation to expressions like Postfix and Prefix evaluation.
+                Convocheck is a <b>server-side</b> web-app for <b>conversion</b> of expressions, codes, and <b>evaluation</b> to expressions like Postfix and Prefix evaluation.
               </p>
               <div class="project-ref">
                 <div class="techStack">
@@ -235,6 +238,7 @@
 
           <!-- projects-3 -->
           <div class="project" data-aos="zoom-in-right">
+            <center><img class="project_img" src="./src/img/project-snaps/weatherApp-snapshot.jpg" alt="proj_img"></center>
             <div class="project-head">
               <table>
                 <tr>
@@ -252,8 +256,8 @@
             </div>
             <div class="project-body">
               <p>
-                This is a Weather application based on current location.
-                It also has a search facility to know weather of other places.
+                This is a <b>Weather</b> application based on <b>current location</b>.
+                It also has a <b>search facility</b> to know weather of other places.
               </p>
               <div class="project-ref">
                 <div class="techStack">
@@ -282,6 +286,7 @@
 
           <!-- projects-4 -->
           <div class="project" data-aos="zoom-in-left">
+            <center><img class="project_img" src="./src/img/project-snaps/GradeWizard-snapshot.jpg" alt="proj_img"></center>
             <div class="project-head">
               <table>
                 <tr>
@@ -300,7 +305,7 @@
             </div>
             <div class="project-body">
               <p>
-                Generate dynamic report card of a student with any number of subjects
+                Generate <b>report card</b> of a student with <b>any number of subjects</b> dynamically.
               </p>
               <div class="project-ref">
                 <div class="techStack">
@@ -329,6 +334,7 @@
 
           <!-- projects-5 -->
           <div class="project" data-aos="zoom-in-right">
+            <center><img class="project_img" src="./src/img/project-snaps/ATM-snapshot.png" alt="proj_img"></center>
             <div class="project-head">
               <table>
                 <tr>
@@ -348,7 +354,7 @@
             <div class="project-body">
               <p>
                 It is a console base project Here we have to first log into our
-                account using user id and password. Then we can do our operations:
+                account using <b>user id</b> and <b>password</b>. Then we can do our operations:
               </p>
               <p>
                 <b>1.Transaction History</b> 
@@ -382,6 +388,7 @@
 
           <!-- projects-6 -->
           <div class="project" data-aos="zoom-in-left">
+            <center><img class="project_img" src="./src/img/project-snaps/portfolio-snapshot.jpg" alt="proj_img"></center>
             <div class="project-head">
               <table>
                 <tr>
@@ -399,9 +406,9 @@
             </div>
             <div class="project-body">
               <p>
-                In my portfolio, I showcased my proficiency in web development, by
-                creating a dynamic and responsive website. This is UI and 
-                UX based project.
+                In my portfolio, I showcased my proficiency in <b>web development</b>, by
+                creating a <b>dynamic</b> and <b>responsive</b> website. This is <b>UI</b> and 
+                <b>UX</b> based project.
               </p>
               <div class="project-ref">
                 <div class="techStack">
@@ -558,7 +565,16 @@
                   <tr>
                       <td></td>
                       <td class="td-right">
-                          <input type="submit" value="Send" id="submitBtn" />
+                        <!-- new submit btn -->
+                        <span class="loading-btn-wrapper">
+                          <button class="loading-btn js_success-animation-trigger">
+                            <span class="loading-btn__text">
+                              Submit
+                            </span>
+                          </button>
+                        </span>
+                            <!-- new submit btn -->
+                          <!-- <input type="submit" value="Send" id="submitBtn" /> -->
                       </td>
                   </tr>
                </table>
@@ -579,7 +595,6 @@
       AOS.init({
         duration: 1200,
         delay: 10,
-        offset: window.innerHeight*0.2,
       });
     </script>
   </body>
