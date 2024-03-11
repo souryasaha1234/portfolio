@@ -7,7 +7,7 @@ const points = [];
 
 // Properties
 let pointsCount = 50;
-const pointRadius = 3;
+const pointRadius = 3.5;
 const pointVelocity = 1;
 const maxDistBetweenPoint = 250;
 const maxLineWidth = 3;
@@ -44,7 +44,8 @@ const renderLines = point => {
     c.save();
     c.globalAlpha = alpha;
     c.lineWidth = maxLineWidth * alpha;
-    c.strokeStyle = 'hsl(358, 65%, 20%)';
+    c.strokeStyle = 'hsl(0, 100%, 20%)';
+    // c.strokeStyle = 'white';
     c.beginPath();
     c.moveTo(point.x, point.y);
     c.lineTo(_p.x, _p.y);

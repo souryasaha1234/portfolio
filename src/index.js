@@ -17,6 +17,7 @@ window.addEventListener('load', function () {
   document.body.style.overflow = 'hidden'; // scroll locked during loading
 });
 
+/*
 //Sticky navigation
 const navigation = document.querySelector('.navigation');
 
@@ -37,6 +38,7 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 
 headerObserver.observe(headerEl);
+*/
 
 // Get the button
 let mybutton = document.getElementById('myBtn');
@@ -85,7 +87,7 @@ const imgObserver = new IntersectionObserver(loadImg, {
 });
 
 imgTargets.forEach(img => imgObserver.observe(img));
-
+/*
 //navigation button mobile
 let AboutBtnMob = document.getElementById('AboutBtnMob');
 let skillsBtnMob = document.getElementById('skillsBtnMob');
@@ -112,6 +114,7 @@ experiencesBtnMob.addEventListener('click', function () {
 contactsBtnMob.addEventListener('click', function () {
   document.getElementById('contacts').scrollIntoView();
 });
+*/
 
 //navigation button
 let AboutBtn = document.getElementById('AboutBtn');
