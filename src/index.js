@@ -9,6 +9,8 @@ window.addEventListener('load', function () {
   setTimeout(function () {
     topFunction();
     document.body.style.overflow = 'visible'; // scroll visible after loading
+    let vid = document.getElementById('myVideo');
+    vid.load(); // forced the background video to load om window load
     loadingScreen.style.display = 'none';
     content.style.display = 'block';
     content.style.opacity = 1;
@@ -16,29 +18,6 @@ window.addEventListener('load', function () {
   }, 3000);
   document.body.style.overflow = 'hidden'; // scroll locked during loading
 });
-
-/*
-//Sticky navigation
-const navigation = document.querySelector('.navigation');
-
-const headerEl = document.querySelector('.headerEl');
-const navHeight = navigation.getBoundingClientRect().height;
-const stickyNav = function (entries) {
-  const [entry] = entries;
-  // console.log(entry);
-  if (!entry.isIntersecting) navigation.classList.add('sticky');
-  else navigation.classList.remove('sticky');
-};
-
-//Intersection observer
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-  rootMargin: `${navHeight}px`,
-});
-
-headerObserver.observe(headerEl);
-*/
 
 // Get the button
 let mybutton = document.getElementById('myBtn');
@@ -87,34 +66,6 @@ const imgObserver = new IntersectionObserver(loadImg, {
 });
 
 imgTargets.forEach(img => imgObserver.observe(img));
-/*
-//navigation button mobile
-let AboutBtnMob = document.getElementById('AboutBtnMob');
-let skillsBtnMob = document.getElementById('skillsBtnMob');
-let projectsBtnMob = document.getElementById('projectsBtnMob');
-let educationBtnMob = document.getElementById('educationBtnMob');
-let experiencesBtnMob = document.getElementById('experiencesBtnMob');
-let contactsBtnMob = document.getElementById('contactsBtnMob');
-
-AboutBtnMob.addEventListener('click', function () {
-  document.getElementById('About').scrollIntoView();
-});
-skillsBtnMob.addEventListener('click', function () {
-  document.getElementById('skills').scrollIntoView();
-});
-projectsBtnMob.addEventListener('click', function () {
-  document.getElementById('projects').scrollIntoView();
-});
-educationBtnMob.addEventListener('click', function () {
-  document.getElementById('education').scrollIntoView();
-});
-experiencesBtnMob.addEventListener('click', function () {
-  document.getElementById('experiences').scrollIntoView();
-});
-contactsBtnMob.addEventListener('click', function () {
-  document.getElementById('contacts').scrollIntoView();
-});
-*/
 
 //navigation button
 let AboutBtn = document.getElementById('AboutBtn');

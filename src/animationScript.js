@@ -18,6 +18,9 @@ const glow = false;
 if (window.innerWidth >= 320 && window.innerWidth <= 480) {
   pointsCount = 30;
 }
+if (window.innerWidth >= 1600) {
+  pointsCount = 80;
+}
 
 //
 let frame = 0;
