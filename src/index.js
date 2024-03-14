@@ -67,7 +67,16 @@ const imgObserver = new IntersectionObserver(loadImg, {
 
 imgTargets.forEach(img => imgObserver.observe(img));
 
+// nav auto collapse
+let navtoggler = document.querySelector('.navbar-toggler');
+let navAutoClose = function () {
+  if (window.innerWidth >= 320 && window.innerWidth <= 1024) {
+    navtoggler.click();
+  }
+};
+
 //navigation button
+let homeBtn = document.getElementById('homeBtn');
 let AboutBtn = document.getElementById('AboutBtn');
 let skillsBtn = document.getElementById('skillsBtn');
 let projectsBtn = document.getElementById('projectsBtn');
@@ -75,23 +84,33 @@ let educationBtn = document.getElementById('educationBtn');
 let experiencesBtn = document.getElementById('experiencesBtn');
 let contactsBtn = document.getElementById('contactsBtn');
 
+homeBtn.addEventListener('click', function () {
+  topFunction();
+  navAutoClose();
+});
 AboutBtn.addEventListener('click', function () {
   document.getElementById('About').scrollIntoView();
+  navAutoClose();
 });
 skillsBtn.addEventListener('click', function () {
   document.getElementById('skills').scrollIntoView();
+  navAutoClose();
 });
 projectsBtn.addEventListener('click', function () {
   document.getElementById('projects').scrollIntoView();
+  navAutoClose();
 });
 educationBtn.addEventListener('click', function () {
   document.getElementById('education').scrollIntoView();
+  navAutoClose();
 });
 experiencesBtn.addEventListener('click', function () {
   document.getElementById('experiences').scrollIntoView();
+  navAutoClose();
 });
 contactsBtn.addEventListener('click', function () {
   document.getElementById('contacts').scrollIntoView();
+  navAutoClose();
 });
 
 //form submit

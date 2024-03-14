@@ -473,7 +473,7 @@ textarea {
 }
 .loading-spinner:before,
 .loading-spinner:after {
-  content: "";
+  content: '';
   position: absolute;
   border-radius: 50px;
   box-shadow: 0 0 0 3px inset #fff;
@@ -561,7 +561,7 @@ textarea {
   .message-me {
     margin-top: 30px;
   }
-  .navbar-toggle::selection{
+  .navbar-toggle::selection {
     border: none;
     outline: none;
   }
@@ -649,7 +649,7 @@ textarea {
   }
   .skill:hover {
     color: unset;
-    border: unset;
+    border: 2px solid white;
     font-weight: unset;
     transform: unset;
   }
