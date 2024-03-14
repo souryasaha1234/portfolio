@@ -37,8 +37,6 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  // document.body.scrollTop = 0;
-  // document.documentElement.scrollTop = 0;
   window.scrollTo(0, 0);
 }
 
@@ -112,6 +110,11 @@ contactsBtn.addEventListener('click', function () {
   document.getElementById('contacts').scrollIntoView();
   navAutoClose();
 });
+
+// // adding main-elements margin
+// const elements = document.querySelectorAll('.main-elements');
+// elements.forEach(element => element.style.marginTop = '200px');
+
 
 //form submit
 function messageMeSubmit() {
