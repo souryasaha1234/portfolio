@@ -4,7 +4,7 @@
 window.addEventListener('load', function () {
   var loadingScreen = document.getElementById('loading-screen');
   var content = document.getElementById('content');
-
+  
   // Simulate a delay to demonstrate the loading effect
   setTimeout(function () {
     topFunction();
@@ -15,7 +15,7 @@ window.addEventListener('load', function () {
     content.style.display = 'block';
     content.style.opacity = 1;
     canvas.style.opacity = 1;
-  }, 3000);
+  }, 1500);
   document.body.style.overflow = 'hidden'; // scroll locked during loading
 });
 
@@ -68,7 +68,7 @@ imgTargets.forEach(img => imgObserver.observe(img));
 // nav auto collapse
 let navtoggler = document.querySelector('.navbar-toggler');
 let navAutoClose = function () {
-  if (window.innerWidth >= 320 && window.innerWidth <= 1024) {
+  if (window.innerWidth <= 1024) {
     navtoggler.click();
   }
 };
@@ -114,7 +114,6 @@ contactsBtn.addEventListener('click', function () {
 // // adding main-elements margin
 // const elements = document.querySelectorAll('.main-elements');
 // elements.forEach(element => element.style.marginTop = '200px');
-
 
 //form submit
 function messageMeSubmit() {

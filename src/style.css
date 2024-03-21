@@ -89,6 +89,9 @@ canvas {
   transition: transform 1s, opacity 1s;
   min-height: 100vh;
 }
+.main-elements{
+  padding-top: 50px;
+}
 #introbox {
   display: flex;
   flex-direction: row;
@@ -136,14 +139,19 @@ canvas {
   margin-bottom: 0vw;
 }
 .body h1 {
-  background-color: var(--red-dark);
+  /* background-color: var(--red-dark);
   padding: 1vw;
   border: 6px double black;
   border-radius: 3rem;
   border-top-left-radius: 0px;
   border-bottom-right-radius: 0px;
   width: max-content;
+  font-size: xxx-large; */
   font-size: xxx-large;
+  text-align: center;
+  margin: 70px;
+  text-shadow: 0px 0px 20px white;
+  text-decoration: underline;
 }
 .body h2 {
   text-decoration: underline;
@@ -349,9 +357,10 @@ canvas {
 .button-ref {
   background-color: var(--red-lite);
   font-size: 25px;
+  display: block;
+  width: fit-content;
+  margin: auto;
   margin-top: 30px;
-  margin-left: 50%;
-  transform: translateX(-50%);
 }
 .button-ref:hover {
   background-color: var(--red-lite);
@@ -534,7 +543,7 @@ textarea {
   text-decoration: none;
 }
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+@media only screen and (max-device-width: 1024px) {
   /* Styles */
   body {
     background-color: black;
@@ -663,8 +672,6 @@ textarea {
   }
   .button-ref {
     font-size: 20px;
-    margin-left: 50px;
-    width: fit-content;
     transform: unset;
   }
   .button-ref:hover {

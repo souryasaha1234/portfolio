@@ -7,16 +7,17 @@ const points = [];
 
 // Properties
 let pointsCount = 50;
-const pointRadius = 3.5;
+const pointRadius = 3;
 const pointVelocity = 1;
-const maxDistBetweenPoint = 250;
-const maxLineWidth = 3;
+let maxDistBetweenPoint = 300;
+const maxLineWidth = 2;
 const renderPoints = true;
 const bokehBackground = false;
 const glow = false;
 
-if (window.innerWidth >= 320 && window.innerWidth <= 480) {
+if (window.innerWidth <= 480) {
   pointsCount = 30;
+  maxDistBetweenPoint = 250;
 }
 if (window.innerWidth >= 1600) {
   pointsCount = 80;
