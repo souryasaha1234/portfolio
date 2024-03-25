@@ -89,7 +89,7 @@ canvas {
   transition: transform 1s, opacity 1s;
   min-height: 100vh;
 }
-.main-elements{
+.main-elements {
   padding-top: 50px;
 }
 #introbox {
@@ -451,7 +451,7 @@ textarea {
 .skill h3 {
   margin-bottom: 15px;
 }
-.skil_list {
+.skill_list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
